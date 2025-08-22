@@ -25,9 +25,6 @@ curl -sSL https://install.python-poetry.org | python3 -
 
 # 安装依赖
 poetry install --no-root
-
-# 激活虚拟环境
-poetry shell
 ```
 
 
