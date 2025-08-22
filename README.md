@@ -245,13 +245,6 @@ poetry run black .
 poetry run flake8 .
 ```
 
-### 日志美化演示
-
-```bash
-# 查看美化后的输出效果
-poetry run python demo_logger.py
-```
-
 ### 构建和发布
 
 ```bash

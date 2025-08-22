@@ -12,13 +12,6 @@ poetry install --no-root
 poetry shell
 ```
 
-### 2. 功能演示
-
-```bash
-# 查看功能演示
-python demo.py
-```
-
 ### 3. 查看支持的链
 
 ```bash
@@ -52,7 +45,7 @@ poetry run evm-native-checker --file addresses.txt --chain polygon --all-results
 
 ```bash
 # 交互式配置和查询
-python check.py
+poetry run python check.py
 ```
 
 ## 支持的网络
@@ -70,7 +63,6 @@ python check.py
 ## 文件说明
 
 - `check.py`: 交互式查询脚本（推荐新手使用）
-- `demo.py`: 功能演示脚本
 - `addresses.txt`: 示例地址文件
 - `EVM_native_checker/`: 核心包
 - `examples/custom_chains.py`: 自定义链配置示例
