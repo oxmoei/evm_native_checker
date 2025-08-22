@@ -1,0 +1,168 @@
+# Python字节码文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C扩展文件
+*.so
+
+# 分发和打包文件
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller打包文件
+#  这些文件通常由Python脚本从模板生成
+#  用于在PyInstaller构建exe时注入日期/其他信息
+*.manifest
+*.spec
+
+# 安装日志
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 单元测试和覆盖率报告
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# 翻译文件
+*.mo
+*.pot
+
+# Django相关文件
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask相关文件
+instance/
+.webassets-cache
+
+# Scrapy相关文件
+.scrapy
+
+# Sphinx文档
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   对于库或包，您可能想要忽略这些文件，因为代码
+#   旨在在多个环境中运行；否则，请将它们包含在版本控制中：
+# .python-version
+
+# pipenv
+#   根据pypa/pipenv#598，建议将Pipfile.lock包含在版本控制中。
+#   但是，在协作的情况下，如果具有平台特定的依赖项或依赖项
+#   没有跨平台支持，pipenv可能安装不工作的依赖项，或者
+#   不安装所有需要的依赖项。
+#Pipfile.lock
+
+# poetry
+#   类似于Pipfile.lock，通常建议将poetry.lock包含在版本控制中。
+#   这对于二进制包特别推荐，以确保可重现性，并且
+#   对于库来说更常被忽略。
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   类似于Pipfile.lock，通常建议将pdm.lock包含在版本控制中。
+#pdm.lock
+#   pdm将项目范围的配置存储在.pdm.toml中，但建议不要将其
+#   包含在版本控制中。
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; 被例如github.com/David-OConnor/pyflow和github.com/pdm-project/pdm使用
+__pypackages__/
+
+# Celery相关文件
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath解析文件
+*.sage.py
+
+# 虚拟环境
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder项目设置
+.spyderproject
+.spyproject
+
+# Rope项目设置
+.ropeproject
+
+# mkdocs文档
+/site
+
+# mypy类型检查
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre类型检查器
+.pyre/
+
+# pytype静态类型分析器
+.pytype/
+
+# Cython调试符号
+cython_debug/
+
+# PyCharm
+#  JetBrains特定的模板在单独的JetBrains.gitignore中维护，可以
+#  添加到全局gitignore或合并到此项目gitignore中。对于PyCharm
+#  项目，取消注释以下行：
+#.idea/
+
+# 项目特定文件
+# 忽略所有JSON和CSV文件（查询结果）
+*.json
+*.csv
+
+# 但保留重要的配置文件
+!pyproject.toml
+!poetry.lock
