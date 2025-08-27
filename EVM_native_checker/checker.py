@@ -177,6 +177,31 @@ class EthereumBalanceChecker:
         except Exception as e:
             logger.error(f"保存结果失败: {e}")
     
+    def save_addresses_with_balance(self, results: List[Dict], output_file: str = "addrs_results.txt"):
+        """保存有余额的地址到文本文件"""
+        output_path = Path(output_file)
+        
+        try:
+            # 过滤有余额的地址
+            addresses_with_balance = [
+                result for result in results 
+                if result['status'] == 'success' and result['balance_native'] > 0
+            ]
+            
+            if not addresses_with_balance:
+                logger.warning("没有找到有余额的地址")
+                return
+            
+            with open(output_path, 'w', encoding='utf-8') as f:
+                for result in addresses_with_balance:
+                    f.write(f'  - "{result["address"]}"\n')
+            
+            logger.success(f"有余额的地址已保存到: {output_path}", Icons.SAVE)
+            logger.info(f"共保存了 {len(addresses_with_balance)} 个有余额的地址")
+            
+        except Exception as e:
+            logger.error(f"保存地址列表失败: {e}")
+    
     def print_summary(self, results: List[Dict]):
         """打印查询结果摘要"""
         total_addresses = len(results)
